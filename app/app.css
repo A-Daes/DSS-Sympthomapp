@@ -178,8 +178,14 @@ body{
 .Login__Form__Button{
   position: relative;
   padding: 10px;
+  top: 5px;
+  background-color: #f1f1f1;
+  color: black;
+  text-decoration-line: none;
   left: 50%;
-  border-radius: 20px
+  border-radius: 20px;
+  border-style:inset;
+  border-width: 1px;
 }
 
 .Login__Options{
@@ -271,4 +277,31 @@ body{
   opacity:0.95;
   height: 500px;
   width: 250px;
+}
+
+.Selection{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-top-style: solid;
+  border-width: 0.5px;
+  background-color: white;
+}
+
+.selText{
+  font-size: xx-large;
+  text-align: auto;
+  font-weight: bold;
+  width: 550px;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.loadingWheel{
+  background-color: grey;
+  height: 64px;
+  width: 64px;
+  margin: auto;
+  border-radius: 50px;
 }
