@@ -4,7 +4,7 @@ angular.module('myApp.sel', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/sel', {
-    templateUrl: 'sel/sel.html',
+    templateUrl: 'pages/sel/sel.html',
     controller: 'selCtrl'
   });
 }])

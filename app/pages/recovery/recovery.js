@@ -4,7 +4,7 @@ angular.module('myApp.recovery', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/recovery', {
-    templateUrl: 'recovery/recovery.html',
+    templateUrl: 'pages/recovery/recovery.html',
     controller: 'recoveryCtrl'
   });
 }])
