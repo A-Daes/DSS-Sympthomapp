@@ -1,0 +1,142 @@
+
+
+
+<div class="EpidemBoard">
+	<button class="EpidemBoard__AccountBlock" onclick="displayUserBox(0)">Ben Dover [imagen]</button>
+
+	<div class="EpidemBoard__Buttons">
+		<button class="EpidemBoard__Buttons__Main" onclick="displayMain()"> Pantalla Principal </button>
+		<button class="EpidemBoard__Buttons__Alerts" onclick="displayAlert()"> Alertas [x] </button>
+		<button class="EpidemBoard__Buttons__Inbox" onclick="displayInbox()"> Bandeja de entrada [x]</button>
+	</div>
+
+
+<!-- Componente Mainview -->
+	<div class="EpidemBoard__MainView" id="mainview">
+	<h2>Bienvenido a su dashboard.</h2>
+		<div class="EpidemBoard__MainViewBox">
+
+			<div class="EpidemBoard__MainView__Map" id="map">
+				Showing Map:	
+			</div>
+
+			<div class="EpidemBoard__MainView__SympthomList">
+
+				<button class="EpidemBoard__MainView__SymtphomList__SummaryButton">Resumir Datos</button>
+
+				<table class="EpidemBoard__MainView__SymtphomListbox">
+					<tr class="EpidemBoard_MainView__SymtphomListbox_Headers">
+						<th>Sintoma</th>
+						<th>Posicion Geografica</th>
+					</tr>
+					<tr>
+						<td>Diarrea</td>
+						<td>San Jose Pinula, Guatemala</td>
+					</tr>
+					<tr>
+						<td>...</td>
+						<td>...</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+
+
+<!-- Componente AlertView -->
+	<div class="EpidemBoard__AlertView" id="alert" style= "display:none">
+	<h2>Alertas</h2>
+		<table class="EpidemBoard__AlertView__Table">
+			<tr>
+				<th>Alerta</th>
+				<th>Posicion Geografica</th>
+				<th>Descripcion</th>
+			</tr>
+			<tr>
+				<td>Mas de 500 casos de diarrea.</td>
+				<td>Zona 15, Guatemala</td>
+				<td>Se detectaron al rededor de ... </td>
+			</tr>
+			<tr>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+			</tr>
+		</table>
+
+		<button class="EpidemBoard__AlertView__SendButton">Crear alerta</button>
+	</div>
+
+
+<!-- Componente InboxView -->
+
+	<div class="EpidemBoard__InboxView"  id="inbox" style= "display:none">
+	<h2>Alertas</h2>
+		<table class="EpidemBoard__InboxView__Table">
+			<tr>
+				<th>Fecha</th>
+				<th>Enviado Por</th>
+				<th>Subject</th>
+				<th>Preview</th>
+			</tr>
+			<tr>
+				<td>31/08/2016</td>
+				<td>Rudy Garrido</td>
+				<td>Re: Re: Cambio de Product Manager</td>
+				<td>No se, mejor trabajen...</td>
+			</tr>
+			<tr>
+				<td>31/08/2016</td>
+				<td>Pablo Koch</td>
+				<td>Re: Cambio de Product Manager</td>
+				<td>Me da igual</td>
+			</tr>
+			<tr>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+				<td>...</td>
+			</tr>
+		</table>
+		<button class="EpidemBoard__InboxView__Send">Enviar Correo</button>
+	</div>
+	
+ <div class="Empty__Space"></div>
+ </div>
+
+<div class="UserBox" id="userbox" style="display:none" onmouseleave="displayUserBox(1)">Holis</div>
+
+
+
+<script>
+function displayMain() {
+    document.getElementById("mainview").style.display = "block";
+    document.getElementById("inbox").style.display = "none";
+    document.getElementById("alert").style.display = "none";
+}
+</script>
+<script>
+function displayInbox() {
+    document.getElementById("mainview").style.display = "none";
+    document.getElementById("inbox").style.display = "block";
+    document.getElementById("alert").style.display = "none";
+}
+</script>
+<script>
+function displayAlert() {
+    document.getElementById("mainview").style.display = "none";
+    document.getElementById("inbox").style.display = "none";
+    document.getElementById("alert").style.display = "block";
+}
+</script>
+
+<script>
+function displayUserBox(enabled){
+	if (enabled == 0){
+		document.getElementById("userbox").style.display="block";
+	}
+	else{
+		document.getElementById("userbox").style.display="none";
+	}
+}
+</script>

@@ -5,7 +5,8 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.login',
   'myApp.recovery',
-  'myApp.sel'
+  'myApp.sel',
+  'myApp.EpidemBoard'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 
