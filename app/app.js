@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.recovery',
   'myApp.sel',
   'myApp.EpidemBoard'
+  'myApp.re-confirmation'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 
